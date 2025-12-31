@@ -1,0 +1,23 @@
+.structure-viewer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  background: #2a1f1a;
+  border-radius: 6px;
+  margin: 5px auto;
+  width: 100%;
+  max-width: 250px;
+  min-height: 100px;
+  height: auto;
+}
+
+.structure-viewer svg {
+  width: 100%;
+  max-width: 250px;
+  max-height: 200px;
+  background: #2a1f1a;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+

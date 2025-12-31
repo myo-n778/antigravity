@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #2a1f1a;
+  min-height: 100vh;
+  color: #ffffff;
+  font-family: 'Noto Serif JP', 'Noto Serif', serif;
+}
+
+.App {
+  min-height: 100vh;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

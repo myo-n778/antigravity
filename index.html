@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Quiz Invaders</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- MathJax for LaTeX support -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <div class="crt-overlay"></div>
+    <div id="game-container">
+        <div id="hud">
+            <div id="score-label">SCORE: <span id="score">0000</span></div>
+            <div id="lives-label">LIVES: <span id="lives">❤️❤️❤️</span></div>
+            <button id="abort-btn" class="hidden">ABORT</button>
+        </div>
+
+        <div id="question-area">
+            <h1 id="question-text">LOADING SYSTEM...</h1>
+        </div>
+
+        <div id="game-world">
+            <!-- Invaders will be spawned here -->
+            <div id="feedback-overlay" class="hidden"></div>
+        </div>
+
+        <div id="start-screen" class="overlay">
+            <h1 class="glitch" data-text="QUIZ INVADERS">QUIZ INVADERS</h1>
+
+            <div id="file-upload-area">
+                <input type="file" id="csv-upload" accept=".csv" style="display:none">
+                <label for="csv-upload" id="upload-label">📁 SELECT CSV</label>
+            </div>
+
+            <div class="settings">
+                <p>MISSIONS LENGTH:</p>
+                <div class="limit-group">
+                    <button class="limit-btn active" data-limit="5">5</button>
+                    <button class="limit-btn" data-limit="10">10</button>
+                    <button class="limit-btn" data-limit="20">20</button>
+                    <button class="limit-btn" data-limit="0">ALL</button>
+                </div>
+            </div>
+
+            <button id="start-btn">BOOT UP</button>
+            <div class="instructions">
+                TAP THE CORRECT ANSWER BOX
+            </div>
+        </div>
+
+        <div id="game-over-screen" class="overlay hidden">
+            <h1 class="glitch" data-text="MISSION COMPLETE">MISSION COMPLETE</h1>
+            <div id="result-rank">RANK: <span id="rank-letter">-</span></div>
+            <p>FINAL SCORE: <span id="final-score">0</span></p>
+            <button id="restart-btn">REBOOT SYSTEM</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

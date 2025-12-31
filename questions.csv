@@ -1,0 +1,115 @@
+Question,Correct,Wrong1,Wrong2,Wrong3
+(基礎)(公式)Ⅰ運動学：等速直線運動の変位$x$（速度$v$，時間$t$）は？,$x=vt$,$x=v/t$,$x=v+t$,$x=vt^2$
+(基礎)(公式)Ⅰ運動学：等加速直線運動の速度式（初速度$v_0$，加速度$a$）は？,$v=v_0+at$,$v=v_0+\frac12at^2$,$v^2=v_0^2+2at$,$v=v_0-at^2$
+(基礎)(公式)Ⅰ運動学：等加速直線運動の変位式（初速度$v_0$）は？,$x=v_0t+\frac12at^2$,$x=v_0+at$,$x=\frac12v_0t^2+at$,$x=v_0t+at^2$
+(基礎)(公式)Ⅰ運動学：等加速直線運動で時間$t$を含まない式は？,$v^2-v_0^2=2ax$,$v-v_0=2ax$,$v^2=v_0^2+2at$,$v^2-v_0^2=ax$
+(基礎)(公式)Ⅰ運動学：自由落下（初速度0，下向き正）の速度$v(t)$は？,$v=gt$,$v=g/t$,$v=\frac12gt^2$,$v^2=2gt$
+(標準)(公式)Ⅰ運動学：自由落下（初速度0，下向き正）の変位$y(t)$は？,$y=\frac12gt^2$,$y=gt$,$y=v_0t+\frac12gt^2$,$y=\frac12g^2t$
+(基礎)(公式)Ⅰ運動学：自由落下（初速度0，下向き正）で時間$t$を含まない式は？,$v^2=2gy$,$v=2gy$,$v^2=gy$,$y=2gv$
+(標準)(公式)Ⅰ運動学：自由落下（初速度0）で速さ$v$と距離$y$の関係は？,$v^2=2gy$,$v=2gy$,$v^2=gy$,$v=\sqrt{gy}$
+(基礎)(公式)Ⅰ運動学：鉛直投げ下げ（下向き正，初速度$v_0$）の速度式は？,$v=v_0+gt$,$v=v_0-gt$,$v^2=v_0^2+2gt$,$v=v_0+\frac12gt^2$
+(基礎)(公式)Ⅰ運動学：鉛直投げ下げ（下向き正，初速度$v_0$）の変位$y$は？,$y=v_0t+\frac12gt^2$,$y=v_0+gt$,$y=\frac12v_0t^2+gt$,$y=v_0t+gt^2$
+(標準)(公式)Ⅰ運動学：鉛直投げ下げで時間$t$を消去した式として正しいのは？（下向き正）,$v^2-v_0^2=2gy$,$v^2-v_0^2=-2gy$,$v-v_0=2gy$,$v^2=v_0^2+2gt$
+(標準)(公式)Ⅰ運動学：鉛直投げ上げ（上向き正）の速度式は？,$v=v_0-gt$,$v=v_0+gt$,$v^2=v_0^2+2gx$,$v=v_0-\frac12gt^2$
+(基礎)(公式)Ⅰ運動学：鉛直投げ上げ（上向き正）の変位$y$は？,$y=v_0t-\frac12gt^2$,$y=v_0t+\frac12gt^2$,$y=v_0-gt$,$y=\frac12v_0t^2-gt$
+(基礎)(公式)Ⅰ運動学：鉛直投げ上げ（上向き正）で時間$t$を含まない式は？,$v^2-v_0^2=-2gy$,$v^2-v_0^2=2gy$,$v-v_0=-2gy$,$v^2+v_0^2=-2gy$
+(標準)(公式)Ⅰ運動学：鉛直投げ上げで最高点の条件として正しいのは？,$v=0$,$a=0$,$g=0$,$x=0$
+(基礎)(公式)Ⅰ運動学：水平投射で水平方向の速度$v_x$は？（空気抵抗なし）,$v_x=v_0$,$v_x=v_0-gt$,$v_x=gt$,$v_x=v_0\cos\theta$
+(基礎)(公式)Ⅰ運動学：水平投射で鉛直方向の速度$v_y$（下向き正）は？,$v_y=gt$,$v_y=v_0+gt$,$v_y=v_0$,$v_y=\frac12gt^2$
+(基礎)(公式)Ⅰ運動学：水平投射で水平位置$x$は？,$x=v_0t$,$x=\frac12v_0t^2$,$x=v_0t-\frac12gt^2$,$x=\frac12gt^2$
+(基礎)(公式)Ⅰ運動学：水平投射で鉛直位置$y$（下向き正）は？,$y=\frac12gt^2$,$y=gt$,$y=v_0t$,$y=v_0t+\frac12gt^2$
+(標準)(公式)Ⅰ運動学：斜方投射の初速度水平成分は？,$v_{0x}=v_0\cos\theta$,$v_{0x}=v_0\sin\theta$,$v_{0x}=v_0\tan\theta$,$v_{0x}=\frac{v_0}{\cos\theta}$
+(標準)(公式)Ⅰ運動学：斜方投射の初速度鉛直成分は？,$v_{0y}=v_0\sin\theta$,$v_{0y}=v_0\cos\theta$,$v_{0y}=v_0\tan\theta$,$v_{0y}=\frac{v_0}{\sin\theta}$
+(標準)(公式)Ⅰ運動学：斜方投射（初速度$v_0$，角$\theta$，空気抵抗無）で水平速度成分$v_x$は？,$v_x=v_0\cos\theta$,$v_x=v_0\sin\theta$,$v_x=v_0\cos\theta+gt$,$v_x=v_0\cos\theta-gt$
+(標準)(公式)Ⅰ運動学：斜方投射（初速度$v_0$，角$\theta$，空気抵抗なし）での鉛直速度成分$v_y$は？,$v_y=v_0\sin\theta-gt$,$v_y=v_0\cos\theta-gt$,$v_y=v_0\sin\theta+gt$,$v_y=v_0\cos\theta+gt$
+(標準)(公式)Ⅰ運動学：斜方投射の水平位置$x(t)$は？,"$x=v_0\cos\theta\,t$","$x=v_0\sin\theta\,t$",$x=v_0t-\frac12gt^2$,$x=\frac12gt^2$
+(標準)(公式)Ⅰ運動学：斜方投射の鉛直位置$y(t)$（上向き正）は？,"$y=v_0\sin\theta\,t-\frac12gt^2$","$y=v_0\sin\theta\,t+\frac12gt^2$","$y=v_0\cos\theta\,t-\frac12gt^2$",$y=\frac12gt^2$
+(標準)(公式)Ⅰ運動学：同じ高さに着地する斜方投射の飛行時間$t$は？,$t=\frac{2v_0\sin\theta}{g}$,$t=\frac{v_0\sin\theta}{g}$,$t=\frac{2v_0\cos\theta}{g}$,$t=\frac{v_0^2\sin2\theta}{g}$
+(標準)(公式)Ⅰ運動学：同じ高さに着地する斜方投射の水平到達距離$L$は？,$L=\frac{v_0^2\sin2\theta}{g}$,$L=\frac{2v_0^2\sin\theta}{g}$,$L=\frac{v_0^2\sin^2\theta}{g}$,$L=\frac{v_0\sin2\theta}{g}$
+(標準)(公式)Ⅰ運動学：射角$\theta$で水平到達距離が最大となる条件は？（同じ高さに着地）,$\theta=45^\circ$,$\theta=30^\circ$,$\theta=60^\circ$,$\theta=90^\circ$
+(標準)(公式)Ⅰ運動学：$v$-$t$グラフの面積が表す量は？,変位,加速度,力積,仕事率
+(標準)(公式)Ⅰ運動学：$a$-$t$グラフの面積が表す量は？,速度変化$\Delta v$,変位,運動量,仕事
+(基礎)(公式)Ⅱ力と運動：ニュートン第2法則（運動方程式）は？,$\sum F=ma$,$\sum F=mv$,$\sum F=\frac{m}{a}$,$\sum F=mg$
+(基礎)(公式)Ⅱ力と運動：重力の大きさとして正しいのは？,$mg$,$\frac12mg$,$m/g$,$g/m$
+(標準)(公式)Ⅱ力と運動：フックの法則（ばね力の大きさ）は？,$F=kx$,$F=\frac{k}{x}$,$F=\frac12kx$,$F=kx^2$
+(基礎)(公式)Ⅱ「圧力」の定義として最も適切なのはどれか。,$p=\dfrac{F}{S}$,$p=FS$,$p=\dfrac{S}{F}$,$p=F+S$
+(基礎)(公式)Ⅱ「水深$h$の点の水圧（ゲージ圧）」の式として最も適切なのはどれか（液体密度$\rho$，重力加速度$g$）。,$p=\rho gh$,$p=\dfrac{\rho g}{h}$,$p=\dfrac{gh}{\rho}$,$p=p_0+\rho gh$
+(基礎)(公式)Ⅱ「水深$h$の点の絶対圧（大気圧$p_0$を含む）」の式として最も適切なのはどれか（液体密度$\rho$）。,$p=p_0+\rho gh$,$p=\rho gh$,$p=p_0-\rho gh$,$p=\dfrac{p_0}{\rho gh}$
+(基礎)(公式)Ⅱ「液体中で物体が受ける浮力」の大きさとして最も適切なのはどれか（液体密度$\rho$，物体が押しのけた体積$V$）。,$F_B=\rho gV$,$F_B=mg$,$F_B=\rho_{\text{物}} gV$,$F_B=\rho gh$
+(標準)(公式)Ⅱ力と運動：斜面角$\theta$で重力の斜面方向成分は？,$mg\sin\theta$,$mg\cos\theta$,$mg\tan\theta$,$\frac{mg}{\sin\theta}$
+(標準)(公式)Ⅱ力と運動：斜面角$\theta$で摩擦なしの垂直抗力$N$は？,$N=mg\cos\theta$,$N=mg\sin\theta$,$N=mg$,$N=mg(\sin\theta+\cos\theta)$
+(標準)(公式)Ⅱ力と運動：斜面角$\theta$で摩擦なしの加速度$a$（斜面下向き正）は？,$a=g\sin\theta$,$a=g\cos\theta$,$a=g\tan\theta$,$a=\frac{g}{\sin\theta}$
+(標準)(公式)Ⅱ力と運動：エレベーターが上向き加速度$a$のとき見かけの重さ$N$は？,$N=m(g+a)$,$N=m(g-a)$,$N=mg$,$N=ma$
+(標準)(公式)Ⅱ力と運動：エレベーターが下向き加速度$a$のとき見かけの重さ$N$は？,$N=m(g-a)$,$N=m(g+a)$,$N=mg$,$N=ma$
+(応用)(公式)Ⅱ力と運動：軽い糸と滑車のAtwood装置(質量$m_1>m_2$のおもりをつりさげる)で加速度$a$は？,$a=\frac{(m_1-m_2)g}{m_1+m_2}$,$a=\frac{(m_1+m_2)g}{m_1-m_2}$,$a=\frac{m_1g}{m_1+m_2}$,$a=\frac{m_2g}{m_1+m_2}$
+(標準)(公式)Ⅱ力と運動：水平面で引く力$F$が水平となす角$\theta$、垂直抗力$N$は？（上向き成分あり）,$N=mg-F\sin\theta$,$N=mg+F\sin\theta$,$N=mg-F\cos\theta$,$N=F\sin\theta$
+(基礎)(公式)Ⅲ摩擦：動摩擦力$f$（動摩擦係数$\mu'$）は？,$f=\mu' N$,$f\le \mu' N$,$f=\mu' mg$,$f=\frac{N}{\mu'}$
+(基礎)(公式)Ⅲ摩擦：静止摩擦力$f$の範囲（静止摩擦係数$\mu$）は？,$0\le f\le \muN$,$f=\muN$,$f=\mu'N$,$f\ge \muN$
+(標準)(公式)Ⅲ摩擦：水平面で右向き外力$F$、動摩擦。合力$F_{\rm net}$（右正）は？,$F_{\rm net}=F-\mu'N$,$F_{\rm net}=F+\mu'N$,$F_{\rm net}=\mu'N-F$,$F_{\rm net}=F/\mu'$
+(標準)(公式)Ⅲ摩擦：斜面角$\theta$で下向きに滑るとき加速度$a$（下向き正）は？,$a=g(\sin\theta-\mu'\cos\theta)$,$a=g(\sin\theta+\mu'\cos\theta)$,$a=g(\cos\theta-\mu'\sin\theta)$,$a=g\sin\theta$
+(標準)(公式)Ⅲ摩擦：最大静止摩擦力$f_{\max}$は？,$f_{\max}=\muN$,$f_{\max}=\mu'N$,$f_{\max}=\mumg$,$f_{\max}=N/\mu$
+(基礎)(公式)Ⅳエネルギー：一定力$F$と変位$x$のなす角$\theta$の仕事$W$は？,$W=Fx\cos\theta$,$W=Fx\sin\theta$,$W=F/x$,$W=F+x$
+(標準)(公式)Ⅳエネルギー：平均仕事率$P$の定義は？,$P=\frac{W}{t}$,$P=Wt$,$P=\frac{t}{W}$,$P=W-t$
+(標準)(公式)Ⅳエネルギー：力と速度が同方向の瞬間仕事率$P$は？,$P=Fv$,$P=F/v$,$P=F+v$,$P=Fv^2$
+(基礎)(公式)Ⅳエネルギー：仕事率$P$の式として正しいのは？,$P=\frac{W}{t}$,$P=Wt$,$P=\frac{t}{W}$,$P=\frac{W}{t^2}$
+(基礎)(公式)Ⅳエネルギー：運動エネルギー$K$は？,$K=\frac12mv^2$,$K=mv$,$K=\frac12mv$,$K=mv^3$
+(標準)(公式)Ⅳエネルギー：仕事-エネルギー原理として正しいのは？,$W=\Delta K$,$W=K$,$W=\Delta U$,$W=\Delta p$
+(基礎)(公式)Ⅳエネルギー：重力による位置エネルギー$U$は？（高さ$h$）,$U=mgh$,$U=mg/h$,$U=\frac12mgh$,$U=gh$
+(標準)(公式)Ⅳエネルギー：ばねの弾性エネルギー$U$は？（ばね定数$k$，伸び$x$）,$U=\frac12kx^2$,$U=kx^2$,$U=\frac12kx$,$U=kx$
+(標準)(公式)Ⅳエネルギー：準静的にばねを自然長から$x$伸ばす外力の仕事$W_{\rm ext}$は？,$W_{\rm ext}=\frac12kx^2$,$W_{\rm ext}=kx^2$,$W_{\rm ext}=-\frac12kx^2$,$W_{\rm ext}=kx$
+(標準)(公式)Ⅳエネルギー：力学的エネルギー保存が成り立つとき正しいのは？（非保存力なし）,$K+U=\text{const}$,$K-U=\text{const}$,$K=\text{const}$,$U=\text{const}$
+(標準)(公式)Ⅳエネルギー：摩擦があるときのエネルギー式として適切なのは？（摩擦の仕事$W_{\rm 摩}$）,$K_1+U_1+W_{\rm 摩}=K_2+U_2$,$K_1+U_1=K_2+U_2$,$K_1-U_1=K_2-U_2$,$K_1+U_1-W_{\rm 摩}=K_2+U_2$
+(標準)(公式)Ⅳエネルギー：摩擦力$f$が距離$x$だけ逆向きにした仕事は？,$W_{\rm 摩}=-fx$,$W_{\rm 摩}=fx$,$W_{\rm 摩}=-\frac12fx$,$W_{\rm 摩}=\frac{f}{x}$
+(基礎)(公式)Ⅴ剛体・重心：力のモーメント$\tau$の大きさは？（力$F$，腕の長さ$d$）,$\tau=Fd$,$\tau=F/d$,$\tau=F+d$,$\tau=F^2d$
+(標準)(公式)Ⅴ剛体・重心：剛体が静止つり合いの条件として正しい組は？,$\sum F=0$かつ$\sum\tau=0$,$\sum F=0$のみ,$\sum\tau=0$のみ,$\sum F=\sum\tau$
+(標準)(公式)Ⅴ剛体・重心：一直線上の重心$x_G$は？,$x_G=\frac{\sum m_ix_i}{\sum m_i}$,$x_G=\frac{\sum x_i}{\sum m_i}$,$x_G=\sum m_ix_i$,$x_G=\frac{\sum m_i}{\sum x_i}$
+"(標準)(公式)Ⅴ剛体・重心：2質点$m_1,m_2$が位置$x_1,x_2$にあるとき重心は？",$x_G=\frac{m_1x_1+m_2x_2}{m_1+m_2}$,$x_G=\frac{x_1+x_2}{2}$,$x_G=\frac{m_1+m_2}{m_1x_1+m_2x_2}$,$x_G=m_1x_1+m_2x_2$
+(標準)(公式)Ⅴ剛体・重心：一様な棒（長さ$L$）の重心位置（端から）は？,$L/2$,$L$,$L/3$,$2L/3$
+(標準)(公式)Ⅴ剛体・重心：棒の一端を支点にして他端に力$F$を垂直に加えるとき力のモーメントは？（棒長$L$）,$\tau=FL$,$\tau=F/L$,$\tau=\frac12FL$,$\tau=FL^2$
+(基礎)(公式)Ⅵ運動量・力積：運動量$p$の定義は？,$p=mv$,$p=\frac12mv^2$,$p=ma$,$p=mg$
+(基礎)(公式)Ⅵ運動量・力積：力積$I$（一定力）として正しいのは？,$I=F\Delta t$,$I=\frac{F}{\Delta t}$,$I=F+\Delta t$,$I=F(\Delta t)^2$
+(標準)(公式)Ⅵ運動量・力積：力積と運動量変化の関係は？,$I=\Delta p$,$I=\frac{\Delta p}{\Delta t}$,$I=p$,$I=\Delta K$
+(基礎)(公式)Ⅵ運動量：力積$\vec{J}$と運動量変化$\Delta\vec{p}$の関係として正しい式は？,$m\vec{v}_0+\vec{F}\Delta t=m\vec{v}$,$m\vec{v}_0-\vec{F}\Delta t=m\vec{v}$,$\vec{F}=m(\vec{v}-\vec{v}_0)$,$\vec{J}=m\vec{v}$
+(標準)(公式)Ⅵ運動量・力積：平均力$F_{\rm av}$と力積$I$の関係は？,$F_{\rm av}=\frac{I}{\Delta t}$,$F_{\rm av}=I\Delta t$,$F_{\rm av}=\frac{\Delta t}{I}$,$F_{\rm av}=I$
+(標準)(公式)Ⅵ運動量・力積：外力が無視できる2物体の運動量保存（1次元）は？,$m_1v_1+m_2v_2=m_1v_1'+m_2v_2'$,$m_1v_1-m_2v_2=m_1v_1'+m_2v_2'$,$m_1v_1+m_2v_2=m_1v_1'-m_2v_2'$,$m_1v_1'=m_2v_2'$
+(標準)(公式)Ⅵ運動量・力積：2次元衝突で運動量保存を立てるとき正しいのは？,$\sum p_x=\text{const}$かつ$\sum p_y=\text{const}$,$\sum p=\text{const}$のみでよい,$\sum p_x=\sum p_y$,$p_xp_y=\text{const}$
+(標準)(公式)Ⅵ運動量・力積：完全非弾性衝突（合体）直後の共通速度$v$は？,$v=\frac{m_1v_1+m_2v_2}{m_1+m_2}$,$v=\frac{m_1v_1-m_2v_2}{m_1+m_2}$,$v=\frac{v_1+v_2}{2}$,$v=\frac{m_1+m_2}{m_1v_1+m_2v_2}$
+(標準)(公式)Ⅵ運動量・力積：弾性衝突で追加される保存則は？,運動エネルギー保存,力学的エネルギー保存,位置エネルギー保存,仕事率一定
+(標準)(公式)Ⅵ運動量：2次元衝突で運動量保存を用いるとき正しい立式は？,$x$成分と$y$成分それぞれで保存式を立てる,速さの大きさだけで保存式を立てる,角度は無視して1次元として扱う,運動量保存の代わりに必ず力学的エネルギー保存を使う
+(標準)(公式)Ⅵ運動量・力積：反発係数$e$の定義として正しい式は？（1次元，接近方向）,$e=-\frac{v_1'-v_2'}{v_1-v_2}$,$e=\frac{v_1'-v_2'}{v_1-v_2}$,$e=-\frac{v_1-v_2}{v_1'-v_2'}$,$e=\frac{v_1'-v_1}{v_2'-v_2}$
+(基礎)(公式)Ⅶ円運動：速度$v$と角速度$\omega$の関係は？（半径$r$）,$v=r\omega$,$v=\omega/r$,$v=2\pi r\omega$,$v=r/\omega$
+(基礎)(公式)Ⅶ円運動：角速度$\omega$と周期$T$の関係として正しい式は？,$\omega=\frac{2\pi}{T}$,$\omega=2\pi T$,$\omega=\frac{T}{2\pi}$,$\omega=\frac{1}{T}$
+(基礎)(公式)Ⅶ円運動：角度$\theta$と角速度$\omega$の関係式として正しいのは？,$\omega=\frac{d\theta}{dt}$,$\omega=\theta t$,$\omega=\frac{dt}{d\theta}$,$\omega=\theta^2/t$
+(標準)(公式)Ⅶ円運動：周期$T$と角速度$\omega$の関係は？,$T=\frac{2\pi}{\omega}$,$T=2\pi\omega$,$T=\frac{\omega}{2\pi}$,$T=\frac{1}{\omega^2}$
+(基礎)(公式)Ⅶ円運動：向心加速度$a$は？,$a=\frac{v^2}{r}$,$a=\frac{v}{r}$,$a=vr$,$a=\frac{r^2}{v}$
+(標準)(公式)Ⅶ円運動：向心加速度を角速度で表すと？,$a=r\omega^2$,$a=\omega^2/r$,$a=r^2\omega$,$a=\omega/r$
+(基礎)(公式)Ⅶ円運動：向心力$F$は？,$F=\frac{mv^2}{r}$,$F=\frac{mv}{r}$,$F=mvr$,$F=\frac{m}{rv^2}$
+(標準)(公式)Ⅶ円運動：向心力を角速度で表すと？,$F=mr\omega^2$,$F=\frac{m\omega^2}{r}$,$F=mr^2\omega$,$F=m\omega/r$
+(応用)(公式)Ⅶ円運動：鉛直円運動の最高点で糸がたるまない最小条件（張力0）は？,$\frac{mv^2}{r}=mg$,$\frac{mv^2}{r}=0$,$\frac{mv}{r}=mg$,$mv^2=mg$
+(基礎)(公式)Ⅶ円運動：速さ$v$と角速度$\omega$の関係式として正しいのは？（半径$r$）,$v=r\omega$,$v=\omega/r$,$v=r/\omega$,$v=r\omega^2$
+(標準)(公式)Ⅶ円運動：半径$r$の等速円運動で回転数$f$と角速度$\omega$の関係は？,$\omega=2\pi f$,$\omega=\frac{f}{2\pi}$,$\omega=\frac{2\pi}{f}$,$\omega=\pi f$
+(基礎)(公式)Ⅷ単振動：ばね振り子の角振動数$\omega$は？,$\omega=\sqrt{\frac{k}{m}}$,$\omega=\frac{k}{m}$,$\omega=\sqrt{km}$,$\omega=\frac{m}{k}$
+(基礎)(公式)Ⅷ単振動：ばね振り子の周期$T$は？,$T=2\pi\sqrt{\frac{m}{k}}$,$T=2\pi\sqrt{\frac{k}{m}}$,$T=\frac{2\pi}{k}$,$T=\frac{2\pi}{m}$
+(標準)(公式)Ⅷ単振動：単振動の最大速さは？（振幅$A$）,$v_{\max}=\omega A$,$v_{\max}=\omega^2A$,$v_{\max}=A/\omega$,$v_{\max}=\omega^3A$
+(標準)(公式)Ⅷ単振動：単振動の最大加速度は？,$a_{\max}=\omega^2A$,$a_{\max}=\omega A$,$a_{\max}=A/\omega^2$,$a_{\max}=\omega^3A$
+(標準)(公式)Ⅷ単振動：単振動で加速度と変位の関係は？,$a=-\omega^2x$,$a=\omega^2x$,$a=-\omega x$,$a=\omega x$
+(標準)(公式)Ⅷ単振動：単振動の全エネルギー$E$は？（ばね定数$k$）,$E=\frac12kA^2$,$E=\frac12kx^2$,$E=\frac12mv^2$,$E=kA$
+(基礎)(公式)Ⅷ単振動：変位$x=A\sin(\omega t)$のとき速さ$v$は？,$v=A\omega\cos(\omega t)$,$v=A\cos(\omega t)$,$v=A\omega\sin(\omega t)$,$v=A\omega^2\cos(\omega t)$
+(基礎)(公式)Ⅷ単振動：単振動の加速度の基本関係として正しいのは？,$a=-\omega^2x$,$a=\omega^2x$,$a=-\omega x$,$a=-Ax$
+(標準)(公式)Ⅷ単振動：単振り子（長さ$\ell$，小振幅）の運動方程式として正しいのは？,$\frac{d^2\theta}{dt^2}= -\frac{g}{\ell}\theta$,$\frac{d^2\theta}{dt^2}= +\frac{g}{\ell}\theta$,$\frac{d^2\theta}{dt^2}= -\frac{\ell}{g}\theta$,$\frac{d^2\theta}{dt^2}= -g\theta$
+(基礎)(公式)Ⅷ単振動：単振り子（長さ$\ell$，小振幅）の角振動数$\omega$は？,$\omega=\sqrt{\frac{g}{\ell}}$,$\omega=\sqrt{\frac{\ell}{g}}$,$\omega=\frac{g}{\ell}$,$\omega=\frac{\ell}{g}$
+(基礎)(公式)Ⅷ単振動：単振り子（長さ$\ell$，小振幅）の周期$T$は？,$T=2\pi\sqrt{\frac{\ell}{g}}$,$T=2\pi\sqrt{\frac{g}{\ell}}$,$T=\frac{2\pi g}{\ell}$,$T=\frac{2\pi \ell}{g}$
+(標準)(公式)Ⅷ単振動：単振り子を単振動として扱う近似条件として最も適切なのは？,振れ角が十分小さく$\sin\theta\approx\theta$が成り立つ,振れ角が大きいほど$\sin\theta\approx\theta$がよく成り立つ,質量$m$が大きいほど単振動になる,糸が重いほど単振動になる
+(標準)(公式)Ⅷ単振動：単振動の速度と変位の関係として正しい式は？,$v^2=\omega^2(A^2-x^2)$,$v=\omega(A-x)$,$v^2=\omega(A^2-x^2)$,$v^2=\omega^2(A-x)$
+(標準)(公式)Ⅸ万有引力：ケプラー第1法則の内容として正しいものはどれか。,惑星の軌道は太陽を1つの焦点とする楕円である,惑星の軌道は太陽を中心とする円である,惑星の速さは常に一定である,惑星の公転周期の2乗は軌道半径の3乗に比例する
+(標準)(公式)Ⅸ万有引力：ケプラー第2法則の内容は？,面積速度が一定,速度が一定,角速度が一定,半径が一定
+(標準)(公式)Ⅸ万有引力：ケプラー第3法則として正しい関係は？（長半径$a$）,$T^2\propto a^3$,$T\propto a^2$,$T^2\propto a^2$,$T\propto a^3$
+(基礎)(公式)Ⅸ万有引力：万有引力の法則は？（距離$r$）,$F=G\frac{m_1m_2}{r^2}$,$F=G\frac{m_1m_2}{r}$,$F=G\frac{m_1+m_2}{r^2}$,$F=G\frac{r^2}{m_1m_2}$
+(標準)(公式)Ⅸ万有引力：中心天体質量$M$、距離$r$での重力加速度$g$は？,$g=\frac{GM}{r^2}$,$g=\frac{GM}{r}$,$g=GMr^2$,$g=\frac{r^2}{GM}$
+(標準)(公式)Ⅸ万有引力：万有引力場での力学的エネルギー保存式は？,$\frac12mv^2-\frac{GMm}{r}=\text{const}$,$\frac12mv^2+\frac{GMm}{r}=\text{const}$,$mv^2-\frac{GMm}{r^2}=\text{const}$,$\frac12mv^2+mgh=\text{const}$
+(標準)(公式)Ⅸ万有引力：万有引力による位置エネルギー（無限遠で0）は？,$U=-G\frac{Mm}{r}$,$U=G\frac{Mm}{r}$,$U=-G\frac{Mm}{r^2}$,$U=-G\frac{M+m}{r}$
+(標準)(公式)Ⅸ万有引力：円軌道半径$r$の衛星の速さ$v$は？,$v=\sqrt{\frac{GM}{r}}$,$v=\sqrt{\frac{2GM}{r}}$,$v=\frac{GM}{r}$,$v=\sqrt{GMr}$
+(標準)(公式)Ⅸ万有引力：円軌道の角速度$\omega$は？,$\omega=\sqrt{\frac{GM}{r^3}}$,$\omega=\sqrt{\frac{GM}{r}}$,$\omega=\frac{GM}{r^3}$,$\omega=\sqrt{GMr^3}$
+(標準)(公式)Ⅸ万有引力：円軌道の周期$T$は？,$T=2\pi\sqrt{\frac{r^3}{GM}}$,$T=2\pi\sqrt{\frac{r}{GM}}$,$T=2\pi\frac{r^3}{GM}$,$T=\frac{2\pi}{\sqrt{GM}}$
+(応用)(公式)Ⅸ万有引力：第1宇宙速度は？（半径$R$）,$v_1=\sqrt{\frac{GM}{R}}$,$v_1=\sqrt{\frac{2GM}{R}}$,$v_1=\frac{GM}{R}$,$v_1=\sqrt{\frac{GR}{M}}$
+(応用)(公式)Ⅸ万有引力：第2宇宙速度は？（半径$R$）,$v_2=\sqrt{\frac{2GM}{R}}$,$v_2=\sqrt{\frac{GM}{R}}$,$v_2=\frac{2GM}{R}$,$v_2=\sqrt{\frac{GM}{2R}}$
