@@ -29,7 +29,7 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 
 3. リモートURLをSSHに変更:
 ```bash
-git remote set-url origin git@github.com:myo-n778/chemistryapp.git
+git remote set-url origin git@github.com:myo-n778/antigravity.git
 git push -u origin main
 ```
 
@@ -43,9 +43,6 @@ git push -u origin main
 ## 現在の状態
 
 - ✅ リポジトリは初期化済み
-- ✅ 初回コミット済み（55ファイル、9194行）
-- ✅ リモートリポジトリ設定済み
-- ⏳ プッシュ待ち（認証が必要）
-
-
-
+- ✅ 初回コミット済み
+- ✅ リモートリポジトリ（myo-n778/antigravity）設定済み
+- ✅ プッシュ完了（2025-12-31時点）
