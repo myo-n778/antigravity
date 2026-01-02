@@ -10,27 +10,40 @@
 
 .question-count-selector-header {
   width: 100%;
-  max-width: 800px;
-  margin-bottom: 10px;
-  text-align: center;
+  max-width: 850px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-main-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  /* 要素間の間隔 */
+  width: 100%;
+  padding: 0 5px;
 }
 
 .back-button {
   background: rgba(255, 140, 0, 0.2);
   color: #ff8c00;
   border: 1px solid #ff8c00;
-  padding: 5px 10px;
+  padding: 0 8px;
   border-radius: 5px;
   font-size: 0.7rem;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-bottom: 8px;
-  width: 60px;
-  height: 28px;
+  width: 54px;
+  height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+  /* 潰れないように */
 }
 
 .back-button:hover {
@@ -40,9 +53,10 @@
 
 .question-count-selector h1 {
   color: #ff8c00;
-  font-size: 1.2rem;
-  margin: 5px 0;
+  font-size: 1.1rem;
+  margin: 0;
   text-shadow: 0 0 10px rgba(255, 140, 0, 0.5);
+  white-space: nowrap;
 }
 
 .question-count-description {
@@ -97,26 +111,77 @@
   transition: all 0.3s ease;
 }
 
+.order-toggle-container {
+  display: flex;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 3px;
+  border-radius: 8px;
+  border: 1px solid #444;
+}
+
+.order-toggle-button {
+  background: transparent;
+  border: none;
+  color: #888;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-family: 'Noto Serif', serif;
+}
+
+.order-toggle-button.active {
+  background: linear-gradient(135deg, #ff8c00 0%, #ffa500 100%);
+  color: #000;
+  box-shadow: 0 0 15px rgba(255, 140, 0, 0.6);
+}
+
+.all-modes-container-single {
+  width: 100%;
+  max-width: 800px;
+  padding: 0 10px;
+  margin-bottom: 15px;
+}
+
+.all-button-large {
+  width: 100% !important;
+  height: 48px !important;
+  font-size: 1rem !important;
+  background: linear-gradient(135deg, #3a2a1a 0%, #4a3a2a 100%) !important;
+  border-color: #ffa500 !important;
+  color: #ffa500 !important;
+}
+
 .start-index-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 8px;
+  grid-template-columns: repeat(3, 1fr);
+  /* 指示通り3列 */
+  gap: 10px;
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
+  padding: 0 10px;
 }
 
 .start-index-button {
   background: linear-gradient(135deg, #2a2a2a 0%, #3a3a3a 100%);
-  border: 2px solid #ff8c00;
+  border: 1.5px solid #ff8c00;
   border-radius: 6px;
-  padding: 10px 12px;
+  padding: 6px 4px;
+  /* 高さを約1/3に短縮 */
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   color: #ff8c00;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: bold;
+  height: 36px;
+  /* 高さを固定 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .start-index-button:hover {
@@ -133,17 +198,45 @@
   box-shadow: 0 0 20px rgba(255, 140, 0, 0.6);
 }
 
-@media (max-width: 768px) {
-  .question-count-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .start-index-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .question-count-selector h1 {
-    font-size: 2em;
-  }
+.start-index-button.all-button {
+  border-color: #ffa500;
+  background: linear-gradient(135deg, #3a2a1a 0%, #4a3a2a 100%);
+  color: #ffa500;
+  font-size: 0.75rem;
+  /* 英文が収まるよう微調整 */
 }
 
+@media (max-width: 768px) {
+  .header-main-row {
+    flex-direction: row;
+    /* モバイルでも1行を維持 */
+    gap: 10px;
+    padding: 0 5px;
+  }
+
+  .start-index-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+
+  .start-index-button {
+    font-size: 0.75rem;
+    height: 32px;
+  }
+
+  .question-count-selector h1 {
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  .order-toggle-button {
+    padding: 3px 6px;
+    font-size: 0.65rem;
+  }
+
+  .back-button {
+    width: 48px;
+    height: 22px;
+    font-size: 0.6rem;
+  }
+}

@@ -10,7 +10,7 @@ import { compounds as defaultOrganicCompounds } from './compounds';
  */
 export const loadCompoundsFromGAS = async (category: Category): Promise<Compound[]> => {
   const gasUrl = GAS_URLS[category];
-  
+
   if (!gasUrl) {
     throw new Error(`GAS URL not configured for category: ${category}`);
   }
@@ -27,23 +27,29 @@ export const loadCompoundsFromGAS = async (category: Category): Promise<Compound
     }
 
     const data = await response.json();
-    
+
     console.log(`[${category}] GAS response received`);
-    
+
     // GASから返されるデータ形式に応じて処理
     if (data.csv) {
       // CSV形式で返される場合
       const csvRows = parseCSV(data.csv);
       console.log(`[${category}] Parsed ${csvRows.length} CSV rows from GAS`);
-      const defaultCompounds = category === 'organic' ? defaultOrganicCompounds : [];
-      const compounds = csvToCompounds(csvRows, defaultCompounds);
+
+      // デフォルトデータ（defaultOrganicCompounds）は使用せず、GASからのデータのみを使用する
+      // これにより、スプレッドシートのデータが確実に優先される
+      const compounds = csvToCompounds(csvRows, []);
       console.log(`[${category}] Converted to ${compounds.length} compounds from GAS`);
-      
+
+      // デバッグ: 全化合物名を出力
+      console.log(`[${category}] All compound names:`, compounds.map(c => c.name));
+
       if (compounds.length === 0) {
-        console.warn('No compounds found after conversion. Using default compounds.');
-        return defaultCompounds;
+        // GASデータが空の場合のみ警告を出すが、デフォルトフォールバックはしない
+        console.warn('No compounds found in GAS data.');
+        return [];
       }
-      
+
       return compounds;
     } else if (data.compounds) {
       // 既にパース済みの化合物データが返される場合
@@ -55,10 +61,11 @@ export const loadCompoundsFromGAS = async (category: Category): Promise<Compound
     }
   } catch (error) {
     console.error(`Failed to load compounds from GAS for ${category}:`, error);
-    // フォールバック: 有機化学の場合はデフォルトデータを返す
+    // フォールバック: 有機化学の場合でもデフォルトデータを返さない（スプレッドシート優先）
+    // 必要なら空配列を返してエラー表示させる
     if (category === 'organic') {
-      console.warn('Falling back to default organic compounds');
-      return defaultOrganicCompounds;
+      console.warn('Failed to load GAS data. Returning empty array to avoid stale data.');
+      return [];
     }
     throw error;
   }
@@ -69,7 +76,7 @@ export const loadCompoundsFromGAS = async (category: Category): Promise<Compound
  */
 export const loadReactionsFromGAS = async (category: Category): Promise<ReactionCSVRow[]> => {
   const gasUrl = GAS_URLS[category];
-  
+
   if (!gasUrl) {
     throw new Error(`GAS URL not configured for category: ${category}`);
   }
@@ -85,7 +92,7 @@ export const loadReactionsFromGAS = async (category: Category): Promise<Reaction
     }
 
     const data = await response.json();
-    
+
     if (data.csv) {
       // CSV形式で返される場合
       return parseReactionCSV(data.csv);

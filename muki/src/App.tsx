@@ -21,54 +21,48 @@ function App() {
   const [quizSettings, setQuizSettings] = useState<QuizSettings | null>(null);
   const [compounds, setCompounds] = useState<Compound[]>([]);
   const [loading, setLoading] = useState(false);
+  const [isPortrait, setIsPortrait] = useState(false);
+
+  // 画面の向きを検出
+  useEffect(() => {
+    const checkOrientation = () => {
+      const isPortraitMode = window.innerHeight > window.innerWidth;
+      setIsPortrait(isPortraitMode);
+    };
+
+    // 初回チェック
+    checkOrientation();
+
+    // リサイズと向き変更を監視
+    window.addEventListener('resize', checkOrientation);
+    window.addEventListener('orientationchange', checkOrientation);
+
+    return () => {
+      window.removeEventListener('resize', checkOrientation);
+      window.removeEventListener('orientationchange', checkOrientation);
+    };
+  }, []);
 
   useEffect(() => {
-    if (selectedCategory && selectedMode && quizSettings) {
+    if (selectedCategory) {
       setLoading(true);
       loadCompounds(selectedCategory)
         .then(data => {
-          console.log(`[${selectedCategory}] 読み込まれた化合物の総数:`, data.length);
-          
-          // 構造式が空の化合物をフィルタリング
-          let validCompounds = data.filter(c => 
-            c.structure && 
-            c.structure.atoms && 
+          // 全化合物データを保持（ReactionQuiz用に構造式がなくても名前で使う）
+          console.log(`App.tsx: Loaded ${data.length} total compounds`);
+
+          // 構造式が有効な化合物をフィルタリング（既存のクイズモード用）
+          const valid = data.filter(c =>
+            c.structure &&
+            c.structure.atoms &&
             c.structure.atoms.length > 0 &&
-            c.structure.bonds && 
+            c.structure.bonds &&
             c.structure.bonds.length > 0
           );
-          
-          // 問題数モードに応じてフィルタリング
-          if (quizSettings.questionCountMode === 'batch-10') {
-            // 10問ずつ: 開始位置から10問を選択
-            const startIdx = (quizSettings.startIndex || 1) - 1; // 0-indexedに変換
-            validCompounds = validCompounds.slice(startIdx, startIdx + 10);
-          }
-          // 'all'の場合は全て使用
-          
-          // 順番モードに応じてソート
-          if (quizSettings.orderMode === 'shuffle') {
-            validCompounds = validCompounds.sort(() => Math.random() - 0.5);
-          }
-          // 'sequential'の場合はそのまま（元の順番）
-          
-          console.log(`[${selectedCategory}] 有効な化合物の数:`, validCompounds.length);
-          
-          if (validCompounds.length === 0) {
-            console.error('No valid compounds found. Data:', data);
-            console.error('Total compounds loaded:', data.length);
-            const invalidCompounds = data.filter(c => 
-              !c.structure || 
-              !c.structure.atoms || 
-              c.structure.atoms.length === 0 ||
-              !c.structure.bonds || 
-              c.structure.bonds.length === 0
-            );
-            console.error('Compounds with invalid structure:', invalidCompounds.length);
-            console.error('Invalid compound names:', invalidCompounds.map(c => c.name));
-          }
-          
-          setCompounds(validCompounds);
+          console.log(`App.tsx: ${valid.length} compounds have valid structures`);
+
+          // setCompoundsには全データを渡す（構造式がなくても名前検索に使うため）
+          setCompounds(data);
           setLoading(false);
         })
         .catch(error => {
@@ -77,35 +71,45 @@ function App() {
           setLoading(false);
         });
     }
-  }, [selectedCategory, selectedMode, quizSettings]);
+  }, [selectedCategory]);
+
+  const getFilteredCompounds = () => {
+    if (!quizSettings) return compounds;
+
+    let filtered = [...compounds];
+
+    // 問題数モードに応じてフィルタリング
+    if (quizSettings.questionCountMode === 'batch-10') {
+      const startIdx = (quizSettings.startIndex || 1) - 1;
+      filtered = filtered.slice(startIdx, startIdx + 10);
+    }
+
+    // 順番モードに応じてソート
+    if (quizSettings.orderMode === 'shuffle') {
+      filtered = filtered.sort(() => Math.random() - 0.5);
+    }
+
+    return filtered;
+  };
+
+  // 縦向きの場合は回転を促すメッセージを表示
+  if (isPortrait && window.innerWidth <= 1024) {
+    return (
+      <div className="App orientation-warning">
+        <div className="orientation-message">
+          <div className="orientation-icon">🔄</div>
+          <h2>横向きに回転してください</h2>
+          <p>このアプリは横向き表示に対応しています。</p>
+          <p>デバイスを横向きに回転させてください。</p>
+        </div>
+      </div>
+    );
+  }
 
   if (!selectedCategory) {
     return (
       <div className="App">
         <CategorySelector onSelectCategory={setSelectedCategory} />
-      </div>
-    );
-  }
-
-  if (!selectedMode) {
-    return (
-      <div className="App">
-        <ModeSelector 
-          category={selectedCategory}
-          onSelectMode={setSelectedMode}
-          onBack={() => setSelectedCategory(null)}
-        />
-      </div>
-    );
-  }
-
-  if (!quizSettings) {
-    return (
-      <div className="App">
-        <QuestionCountSelector
-          onSelectSettings={setQuizSettings}
-          onBack={() => setSelectedMode(null)}
-        />
       </div>
     );
   }
@@ -120,10 +124,37 @@ function App() {
     );
   }
 
+  if (!selectedMode) {
+    return (
+      <div className="App">
+        <ModeSelector
+          category={selectedCategory}
+          onSelectMode={setSelectedMode}
+          onBack={() => setSelectedCategory(null)}
+        />
+      </div>
+    );
+  }
+
+  if (!quizSettings) {
+    return (
+      <div className="App">
+        <QuestionCountSelector
+          totalCount={compounds.length}
+          onSelectSettings={setQuizSettings}
+          onBack={() => setSelectedMode(null)}
+        />
+      </div>
+    );
+  }
+
+  const finalCompounds = getFilteredCompounds();
+
   return (
     <div className="App">
-      <Quiz 
-        compounds={compounds} 
+      <Quiz
+        compounds={finalCompounds}
+        allCompounds={compounds}
         mode={selectedMode}
         category={selectedCategory}
         onBack={() => setQuizSettings(null)}

@@ -39,21 +39,17 @@ export const loadCompounds = async (category: Category): Promise<Compound[]> => 
     if (!response.ok) {
       throw new Error(`Failed to load ${category}/compounds.csv`);
     }
-    
+
     const csvText = await response.text();
     const csvRows = parseCSV(csvText);
-    // 有機化学の場合は既存のデフォルトデータを使用
-    const defaultCompounds = category === 'organic' ? defaultOrganicCompounds : [];
-    const compounds = csvToCompounds(csvRows, defaultCompounds);
-    
+    // プリセットデータは使用せず、外部データのみを使用
+    const compounds = csvToCompounds(csvRows, []);
+
     compoundCache[category] = compounds;
     return compounds;
   } catch (error) {
-    console.warn(`Failed to load compounds from CSV for ${category}, using default data:`, error);
-    // 有機化学の場合は既存のデフォルトデータを返す
-    if (category === 'organic') {
-      return defaultOrganicCompounds;
-    }
+    console.warn(`Failed to load compounds from CSV for ${category}:`, error);
+    // フォールバック時もプリセットは使用しない
     return [];
   }
 };
@@ -81,10 +77,10 @@ export const loadReactions = async (category: Category): Promise<ReactionCSVRow[
     if (!response.ok) {
       throw new Error(`Failed to load ${category}/reactions.csv`);
     }
-    
+
     const csvText = await response.text();
     const reactions = parseReactionCSV(csvText);
-    
+
     reactionCache[category] = reactions;
     return reactions;
   } catch (error) {
