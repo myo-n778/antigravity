@@ -1,5 +1,5 @@
 import { Compound } from '../types';
-import { parseCSV, csvToCompounds, CompoundCSVRow } from '../utils/csvParser';
+import { parseCSV, csvToCompounds } from '../utils/csvParser';
 import { parseReactionCSV, ReactionCSVRow } from '../utils/reactionParser';
 import { compounds as defaultOrganicCompounds } from './compounds';
 import { Category } from '../components/CategorySelector';
