@@ -130,6 +130,7 @@ class Game {
     }
 
     resetToStart() {
+        QuizFeedback.clear();
         this.isRunning = false;
         if (this.animationId) cancelAnimationFrame(this.animationId);
         this.ui.startScreen.classList.remove('hidden');
@@ -140,6 +141,7 @@ class Game {
     }
 
     boot() {
+        QuizFeedback.clear();
         this.score = 0;
         this.lives = CONFIG.MAX_LIVES;
         this.currentQuestionIndex = 0;
@@ -175,6 +177,8 @@ class Game {
     }
 
     showFeedback(isCorrect) {
+        if (isCorrect) { QuizFeedback.correct(); return; }
+        QuizFeedback.clear();
         const overlay = this.ui.feedbackOverlay;
         overlay.textContent = isCorrect ? 'CORRECT!' : 'WRONG!';
         overlay.className = isCorrect ? 'feedback-correct' : 'feedback-wrong';
@@ -185,6 +189,7 @@ class Game {
     }
 
     nextQuestion() {
+        QuizFeedback.clear();
         if (!this.isRunning) return;
 
         if (this.currentQuestionIndex >= this.activeQuestions.length) {
@@ -258,7 +263,7 @@ class Game {
             this.invaders = [];
 
             this.currentQuestionIndex++;
-            setTimeout(() => { if (this.isRunning) this.nextQuestion(); }, 600);
+            setTimeout(() => { if (this.isRunning) this.nextQuestion(); }, 750);
         } else {
             invader.el.classList.add('wrong');
             this.showFeedback(false);

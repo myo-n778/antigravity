@@ -1,3 +1,5 @@
+import { useAnswerFeedback } from '../../utils/useAnswerFeedback';
+import { correct as showCorrectFeedback } from '../../utils/quizFeedback';
 import React, { useState, useEffect, useMemo } from 'react';
 import { Compound } from '../../types';
 import { Category } from '../CategorySelector';
@@ -18,6 +20,7 @@ export const ReactionQuiz: React.FC<ReactionQuizProps> = ({ compounds, category,
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [showResult, setShowResult] = useState(false);
+  const { acceptAnswer, resetAnswerFeedback } = useAnswerFeedback();
   const [score, setScore] = useState(0);
   const [totalAnswered, setTotalAnswered] = useState(0);
   const [reactions, setReactions] = useState<ReactionCSVRow[]>([]);
@@ -109,12 +112,14 @@ export const ReactionQuiz: React.FC<ReactionQuizProps> = ({ compounds, category,
 
   const handleAnswer = (answer: string) => {
     if (showResult) return;
+    if (!acceptAnswer()) return;
 
     setSelectedAnswer(answer);
     setShowResult(true);
     setTotalAnswered(prev => prev + 1);
 
     if (answer === correctValue) {
+      showCorrectFeedback();
       setScore(prev => prev + 1);
     }
   };
@@ -123,7 +128,8 @@ export const ReactionQuiz: React.FC<ReactionQuizProps> = ({ compounds, category,
     if (currentIndex < reactions.length - 1) {
       setCurrentIndex(prev => prev + 1);
       setSelectedAnswer(null);
-      setShowResult(false);
+      resetAnswerFeedback();
+    setShowResult(false);
     } else {
       setIsFinished(true);
     }
@@ -132,6 +138,7 @@ export const ReactionQuiz: React.FC<ReactionQuizProps> = ({ compounds, category,
   const handleReset = () => {
     setCurrentIndex(0);
     setSelectedAnswer(null);
+    resetAnswerFeedback();
     setShowResult(false);
     setScore(0);
     setTotalAnswered(0);
@@ -219,7 +226,7 @@ export const ReactionQuiz: React.FC<ReactionQuizProps> = ({ compounds, category,
             {showResult && (
               <div className="result-action-inline">
                 <span className={selectedAnswer === correctValue ? "result-correct" : "result-incorrect"}>
-                  {selectedAnswer === correctValue ? "✓ Correct!" : "✗ Wrong"}
+                  {selectedAnswer === correctValue ? "正解" : "✗ Wrong"}
                 </span>
                 <button
                   className={selectedAnswer === correctValue ? "next-button-correct" : "next-button-incorrect"}

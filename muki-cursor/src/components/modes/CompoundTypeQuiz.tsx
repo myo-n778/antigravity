@@ -1,3 +1,5 @@
+import { useAnswerFeedback } from '../../utils/useAnswerFeedback';
+import { correct as showCorrectFeedback } from '../../utils/quizFeedback';
 import React, { useState, useEffect, useMemo } from 'react';
 import { Compound } from '../../types';
 import { Category } from '../CategorySelector';
@@ -30,6 +32,7 @@ export const CompoundTypeQuiz: React.FC<CompoundTypeQuizProps> = ({ compounds, o
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [showResult, setShowResult] = useState(false);
+  const { acceptAnswer, resetAnswerFeedback } = useAnswerFeedback();
   const [score, setScore] = useState(0);
   const [totalAnswered, setTotalAnswered] = useState(0);
 
@@ -46,12 +49,14 @@ export const CompoundTypeQuiz: React.FC<CompoundTypeQuizProps> = ({ compounds, o
 
   const handleAnswer = (answer: string) => {
     if (showResult) return;
+    if (!acceptAnswer()) return;
     
     setSelectedAnswer(answer);
     setShowResult(true);
     setTotalAnswered(prev => prev + 1);
     
     if (answer === correctType) {
+      showCorrectFeedback();
       setScore(prev => prev + 1);
     }
   };
@@ -63,12 +68,14 @@ export const CompoundTypeQuiz: React.FC<CompoundTypeQuizProps> = ({ compounds, o
       setCurrentIndex(0);
     }
     setSelectedAnswer(null);
+    resetAnswerFeedback();
     setShowResult(false);
   };
 
   const handleReset = () => {
     setCurrentIndex(0);
     setSelectedAnswer(null);
+    resetAnswerFeedback();
     setShowResult(false);
     setScore(0);
     setTotalAnswered(0);
@@ -76,6 +83,7 @@ export const CompoundTypeQuiz: React.FC<CompoundTypeQuizProps> = ({ compounds, o
 
   useEffect(() => {
     setSelectedAnswer(null);
+    resetAnswerFeedback();
     setShowResult(false);
   }, [currentIndex]);
 
