@@ -1,3 +1,4 @@
+import { mountSoundControl, clear as clearAnswerFeedback } from './utils/quizFeedback';
 import { useState, useEffect } from 'react';
 import { Quiz } from './components/Quiz';
 import { ModeSelector, QuizMode } from './components/ModeSelector';
@@ -16,6 +17,7 @@ export interface QuizSettings {
 }
 
 function App() {
+  useEffect(() => { mountSoundControl(); return clearAnswerFeedback; }, []);
   const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
   const [selectedMode, setSelectedMode] = useState<QuizMode | null>(null);
   const [quizSettings, setQuizSettings] = useState<QuizSettings | null>(null);

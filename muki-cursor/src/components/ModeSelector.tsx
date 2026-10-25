@@ -27,14 +27,14 @@ export const ModeSelector: React.FC<ModeSelectorProps> = ({ category, onSelectMo
         </button>
         <h1>{categoryName}クイズ</h1>
       </div>
-      <p className="mode-description">モードを選択してください</p>
+
       <div className="mode-grid">
         <button 
           className="mode-button"
           onClick={() => onSelectMode('structure-to-name')}
         >
           <div className="mode-title">① 構造式から名称</div>
-          <div className="mode-subtitle">図から名称を選ぶ</div>
+
         </button>
         
         <button 
@@ -42,7 +42,7 @@ export const ModeSelector: React.FC<ModeSelectorProps> = ({ category, onSelectMo
           onClick={() => onSelectMode('name-to-structure')}
         >
           <div className="mode-title">② 名称から構造式</div>
-          <div className="mode-subtitle">名称から図を選ぶ</div>
+
         </button>
         
         <button 
