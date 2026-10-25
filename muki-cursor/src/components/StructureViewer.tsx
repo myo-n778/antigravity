@@ -11,8 +11,8 @@ interface StructureViewerProps {
 
 export const StructureViewer: React.FC<StructureViewerProps> = ({
   structure,
-  width,
-  height,
+  width: _width,
+  height: _height,
   compoundName,
 }) => {
   // ベンゼン環かどうかを判定（ベンゼン、トルエン、クロロベンゼンなど）
@@ -123,7 +123,7 @@ export const StructureViewer: React.FC<StructureViewerProps> = ({
     );
   };
 
-  const bondsToRender = structure.bonds.flatMap((bond, idx) => {
+  const bondsToRender = structure.bonds.flatMap((bond) => {
     if (bond.type === 'single') {
       return [renderBond(bond, 0)];
     } else if (bond.type === 'double') {
