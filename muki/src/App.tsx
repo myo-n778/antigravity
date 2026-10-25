@@ -1,5 +1,5 @@
 import { mountSoundControl, clear as clearAnswerFeedback } from './utils/quizFeedback';
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Quiz } from './components/Quiz';
 import { ModeSelector, QuizMode } from './components/ModeSelector';
 import { CategorySelector, Category } from './components/CategorySelector';
